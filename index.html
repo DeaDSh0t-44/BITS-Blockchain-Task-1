@@ -7,28 +7,51 @@
     <title>Webflow Clone</title>
     <link rel="stylesheet" href="card_styles.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <script src="https://kit.fontawesome.com/3de856c8a4.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <div class="Bar">
-            <button>Product </button>
-            <button>Marketplace </button>
-            <button>Learn </button>
-            <button>Resources </button>
+        <div class="menu-bar">
+            <button class="menu-button" onclick="toggleDropdown()">Product 
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <button class="menu-button">Marketplace
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <button class="menu-button">Learn</button>
+            <button class="menu-button">Resources
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
         </div>
             <div class="Login">
-                <button>Login</button>
-                <button>Contact Sales</button>
-                <button class="cta">Get started — it's free</button>
+                <button class="log">Login</button>
+                <button class="cs">Contact Sales</button>
+                <button class="cta"><p style="
+                display: inline-block;
+                font-weight: 700; "
+                >Get started</p><p style="
+                display: inline-block;
+                font-weight: 500;"
+                > — it's free</p></button>
             </div>
        
     </header>
 
     <main>
         <section class="hero">
-            <h1>Discover inspiring websites built by the Webflow community</h1>
-            <p>Browse, clone, and customize thousands of websites #MadeinWebflow.</p>
-            <input type="text" placeholder="Search">
+            <button class="mwbf"> Made in Webflow</button>
+            <div class = "dwbfc">
+                <span>Discover inspiring websites </span> 
+                <span>built by the Webflow community</span>
+            </div>
+            <div class="bcmiwbf"><p class="bcmiwbfc">Browse, clone, and customize thousands of websites #MadeinWebflow.</p>
+            <p class="lft"> Looking for Templates?</p></div>
+            <div class="search-container">
+                <div class="search-box" contenteditable="true" data-placeholder="Search"></div>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <button class="search-button" onclick="performSearch()">Search</button>
+            </div>
             <div class="filters">
                 <button>All</button>
                 <button>Animation</button>
