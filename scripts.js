@@ -3,42 +3,33 @@ document.addEventListener('DOMContentLoaded', () => {
     const filterButtons = document.querySelectorAll('.filters button');
     const showcase = document.querySelector('.showcase');
 
+    // Search functionality for the input field
     searchInput.addEventListener('input', (event) => {
         const query = event.target.value.toLowerCase();
-        // Implement search functionality
+        // Implement search functionality here
     });
 
+    // Filter buttons functionality
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // Implement filter functionality
+            // Implement filter functionality here
         });
     });
 
-    function toggleDropdown() {
-        var dropdownContent = document.getElementById("dropdown-content");
-        dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
-    }
-
-    window.onclick = function(event) {
-        var dropdownContent = document.getElementById("dropdown-content");
-        var dropdownButton = document.querySelector('.menu-button');
-        
-        if (!dropdownContent.contains(event.target) && !dropdownButton.contains(event.target)) {
-            dropdownContent.style.display = "none";
-        }
-    }
+    // Word replacement in the headline based on contenteditable search-box input
+    document.querySelector('.search-box').addEventListener('input', function() {
+        const searchText = this.textContent.trim();  // Get the content of the div
+        const wordToReplace = document.querySelector('.word-to-replace');  // Use class instead of id
     
-    function performSearch() {
-        // Get the text from the div
-        const query = document.querySelector('.search-box').innerText.trim();
-        // Log the query or implement your search logic here
-        console.log('Searching for:', query);
-        
-        // Example search functionality
-        if (query) {
-            alert(`Search query: ${query}`);
+        // If there is text in the search-box, replace "inspiring" with it, else use default word
+        if (searchText.length > 0) {
+            wordToReplace.textContent = searchText;
+            wordToReplace.classList.remove('default');
+            wordToReplace.classList.add('replaced');
         } else {
-            alert('Please enter a search term.');
+            wordToReplace.textContent = 'inspiring';
+            wordToReplace.classList.remove('replaced');
+            wordToReplace.classList.add('default');
         }
-    }
+    });
 });

@@ -42,23 +42,26 @@
         <section class="hero">
             <button class="mwbf"> Made in Webflow</button>
             <div class = "dwbfc">
-                <span>Discover inspiring websites </span> 
+                <span id="headline">Discover <span id="replace-word" class="default">inspiring</span> websites </span> 
                 <span>built by the Webflow community</span>
             </div>
             <div class="bcmiwbf"><p class="bcmiwbfc">Browse, clone, and customize thousands of websites #MadeinWebflow.</p>
             <p class="lft"> Looking for Templates?</p></div>
-            <div class="search-container">
-                <div class="search-box" contenteditable="true" data-placeholder="Search"></div>
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <button class="search-button" onclick="performSearch()">Search</button>
+            <div class="search-holder">
+                    <div class="search-container">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="search-input" placeholder="Search" oninput="updateWord()">
+                    </div>
             </div>
-            <div class="filters">
-                <button>All</button>
-                <button>Animation</button>
-                <button>Interactions</button>
-                <button>CMS</button>
-                <button>Ecommerce</button>
-                <button>Portfolio</button>
+            <div class="filter-container">
+                <div class="filters">
+                    <button class="filter-button">All</button>
+                    <button class="filter-button">Animation</button>
+                    <button class="filter-button">Interactions</button>
+                    <button class="filter-button">CMS</button>
+                    <button class="filter-button">Ecommerce</button>
+                    <button class="filter-button">Portfolio</button>
+                </div>
             </div>
         </section>
 
@@ -89,5 +92,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="DRWscripts.js"></script>
 </body>
 </html>
