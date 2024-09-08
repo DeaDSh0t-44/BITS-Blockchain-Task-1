@@ -159,14 +159,14 @@ h1{
     margin-bottom: 20px;
 }
 
-.filters {
+.options {
     width: 554.6px;
     display: flex;
     gap: 10px;
     justify-content: center;
 }
 
-.filter-button{
+.option-button{
     height: 40px;
     font-weight: 600;
     font-family: 'Roboto', sans-serif;
@@ -181,18 +181,16 @@ h1{
     cursor: pointer;         
 }
 
-.filter-button:hover{
+.option-button:hover{
     background-color: grey;
 }
 
-.filter-button:active, 
-.filter-button:focus{
+.option-button:active, 
+.option-button:focus{
     border: 1px solid blue;
 }
 
-
-
-.filter-container{
+.option-container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -256,6 +254,10 @@ h1{
     font-size: 14px;
 }
 
+#search-input:focus{
+    outline: none;
+}
+
 .dwbfc{
     margin: 0px;
     margin-top: 23px;
@@ -300,5 +302,113 @@ h1{
 
 .replaced {
     color: blue;
+}
+
+.filter-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.filter-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    padding: 10px;
+    padding-left: 100px;
+}
+
+.filter-item {
+    display: flex;
+    align-items: center;
+}
+
+.filter-item-slider{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    position: relative;
+
+}
+
+.filter-item-slider i{
+    color: rgb(167, 167, 167);
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.dropdown {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 11px 5px 11px 5px;
+    width: 135px;
+}
+
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+    margin-right: 10px; 
+}
+
+.toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.toggle input:checked + .slider {
+    background-color: #2196F3; 
+}
+
+.toggle input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+.showcase-button {
+    padding: 10px 20px;
+    margin-right: 100px;
+    background-color: #007bff; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.showcase-button:hover {
+    background-color: #0056b3; 
 }
 

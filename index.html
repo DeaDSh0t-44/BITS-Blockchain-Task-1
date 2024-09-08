@@ -7,6 +7,7 @@
     <title>Webflow Clone</title>
     <link rel="stylesheet" href="card_styles.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="ToolTip.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <script src="https://kit.fontawesome.com/3de856c8a4.js" crossorigin="anonymous"></script>
 </head>
@@ -53,15 +54,40 @@
                         <input type="text" id="search-input" placeholder="Search" oninput="updateWord()">
                     </div>
             </div>
-            <div class="filter-container">
-                <div class="filters">
-                    <button class="filter-button">All</button>
-                    <button class="filter-button">Animation</button>
-                    <button class="filter-button">Interactions</button>
-                    <button class="filter-button">CMS</button>
-                    <button class="filter-button">Ecommerce</button>
-                    <button class="filter-button">Portfolio</button>
+            <div class="option-container">
+                <div class="options">
+                    <button class="option-button">All</button>
+                    <button class="option-button">Animation</button>
+                    <button class="option-button">Interactions</button>
+                    <button class="option-button">CMS</button>
+                    <button class="option-button">Ecommerce</button>
+                    <button class="option-button">Portfolio</button>
                 </div>
+            </div>
+            <div class="filter-container">
+                <div class="filter-bar">
+                    <div class="filter-item">
+                        <select class="dropdown">
+                            <option value="popular">Popular</option>
+                            <option value="newest">Newest</option>
+                            <option value="trending">Trending</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-item-slider">
+                        <label class="toggle">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                        <span class="filter-item-div">Cloneable sites only
+                            <i class="fa-regular fa-circle-question" id="tooltip-icon"></i>
+                            <div class="tooltip" id="tooltip">
+                                Cloneable sites can be copied, modified, and used for personal or commercial purposes.
+                            </div>
+                        </span>
+                    </div>
+            </div> 
+                <button class="showcase-button">Showcase your site</button>
             </div>
         </section>
 
@@ -93,5 +119,6 @@
 
     <script src="script.js"></script>
     <script src="DRWscripts.js"></script>
+    <script src="ToolTip.js"></script>
 </body>
 </html>

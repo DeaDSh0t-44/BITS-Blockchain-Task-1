@@ -1,0 +1,48 @@
+#tooltip-icon {
+    cursor: pointer;
+    font-size: 18px;
+    color: #6c757d;
+    position: relative;
+    z-index: 20;
+}
+
+ .tooltip {
+    display: none;
+    position: absolute;
+    width: 250px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    color: #333;
+    z-index: 10;
+    transition: opacity 0.2s ease-in-out;
+    transform: translateX(-50%); /* Center tooltip horizontally */
+}
+
+/* Arrow pointing towards the question mark icon */
+ .tooltip::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+/* Arrow styles when positioned above */
+ .tooltip.above::after {
+    bottom: -6px; /* Adjust as needed to align with the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px 6px 0 6px;
+    border-color: #f0f0f0 transparent transparent transparent;
+}
+
+ .tooltip.below::after {
+    top: -6px; /* Adjust as needed to align with the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 0 6px 6px 6px;
+    border-color: transparent transparent #f0f0f0 transparent;
+}
